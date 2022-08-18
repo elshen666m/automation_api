@@ -9,6 +9,6 @@ class MachineController extends Controller
 {
     public function create(Request $request)
     {
-        Http::post('http://127.0.0.1:8080/api/add-machine', $request->post());
+        Http::post('http://188.62.172.97:8080/api/add-machine', $request->post());
     }
 }
