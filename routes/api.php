@@ -29,4 +29,6 @@ Route::prefix('/datacenters')->controller(DatacenterController::class)->group(fu
 Route::prefix('/machines')->controller(MachineController::class)->group(function () {
     Route::post('/', 'create');
     Route::post('/start', 'start');
+    Route::post('/stop', 'stop');
+    Route::post('/reset', 'reset');
 });
