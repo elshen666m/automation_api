@@ -16,4 +16,12 @@ class MachineController extends Controller
             'datacenter' => $request->datacenter
         ]);
     }
+
+    public function start(Request $request)
+    {
+        $res = Http::post('http://188.72.162.97:8080/api/start-machine', [
+            'whmcs_id' => $request->whmcs_id,
+            'state' => 'powerOn'
+        ]);
+    }
 }
