@@ -20,9 +20,25 @@ class MachineController extends Controller
 
     public function start(Request $request)
     {
-        $res = Http::post('http://188.72.162.97:8080/api/start-machine', [
+        $res = Http::post('http://188.72.162.97:8080/api/change-machine-state', [
             'whmcs_id' => $request->whmcs_id,
             'state' => 'powerOn'
+        ]);
+    }
+
+    public function stop(Request $request)
+    {
+        $res = Http::post('http://188.72.162.97:8080/api/change-machine-state', [
+            'whmcs_id' => $request->whmcs_id,
+            'state' => 'powerOff'
+        ]);
+    }
+
+    public function reset(Request $request)
+    {
+        $res = Http::post('http://188.72.162.97:8080/api/change-machine-state', [
+            'whmcs_id' => $request->whmcs_id,
+            'state' => 'reset'
         ]);
     }
 }
