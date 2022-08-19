@@ -13,7 +13,8 @@ class MachineController extends Controller
             'memory' => $request->memory,
             'disk' => $request->disk,
             'cpu' => $request->cpu,
-            'datacenter' => $request->datacenter
+            'datacenter' => $request->datacenter,
+            'whmcs_id' => $request->whmcs_id
         ]);
     }
 
